@@ -40,7 +40,7 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/audio/**","/css/**", "/img/**","/js/**","/svg/**","/dist/**").permitAll()
+                        .requestMatchers("/audio/**","/css/**", "/img/**","/js/**","/svg/**","/vendor/**").permitAll()
                         .requestMatchers(String.valueOf(PathRequest.toStaticResources().atCommonLocations())).permitAll()
                         .anyRequest().authenticated()
                 ).formLogin(form -> form
