@@ -67,9 +67,9 @@ $(function () {
             return (
               "<span data-bs-toggle='tooltip' data-bs-html='true' title='<span>" +
               $invoice_status +
-              '<br> <strong>Balance:</strong> ' +
+              '<br> <span class="fw-medium">Balance:</span> ' +
               $balance +
-              '<br> <strong>Due Date:</strong> ' +
+              '<br> <span class="fw-medium">Due Date:</span> ' +
               $due_date +
               "</span>'>" +
               roleBadgeObj[$invoice_status] +
@@ -105,12 +105,12 @@ $(function () {
             var $row_output =
               '<div class="d-flex justify-content-start align-items-center">' +
               '<div class="avatar-wrapper">' +
-              '<div class="avatar avatar-sm me-2">' +
+              '<div class="avatar me-2">' +
               $output +
               '</div>' +
               '</div>' +
               '<div class="d-flex flex-column">' +
-              '<a href="pages-profile-user.html" class="text-body text-truncate"><span class="fw-semibold">' +
+              '<a href="pages-profile-user.html" class="text-body text-truncate"><span class="fw-medium">' +
               $name +
               '</span></a>' +
               '<small class="text-truncate text-muted">' +
@@ -190,9 +190,9 @@ $(function () {
       ],
       order: [[1, 'desc']],
       dom:
-        '<"row ms-2 me-3"' +
+        '<"row mx-1"' +
         '<"col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start gap-2"l<"dt-action-buttons text-xl-end text-lg-start text-md-end text-start mt-md-0 mt-3"B>>' +
-        '<"col-12 col-md-6 d-flex align-items-center justify-content-end flex-column flex-md-row pe-3 gap-md-2"f<"invoice_status mb-3 mb-md-0">>' +
+        '<"col-12 col-md-6 d-flex align-items-center justify-content-end flex-column flex-md-row pe-3 gap-md-3"f<"invoice_status mb-3 mb-md-0">>' +
         '>t' +
         '<"row mx-2"' +
         '<"col-sm-12 col-md-6"i>' +

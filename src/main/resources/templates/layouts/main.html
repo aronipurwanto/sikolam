@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html th:lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       class="light-style layout-navbar-fixed layout-menu-fixed" dir="ltr" data-theme="theme-default"
-        data-assets-path="/" data-template="vertical-menu-template-no-customizer">
+      data-assets-path="/" data-template="vertical-menu-template-no-customizer">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
@@ -17,29 +17,29 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"/>
 
   <!-- Icons -->
-  <link rel="stylesheet" th:href="@{~/vendor/fonts/fontawesome.css }" />
-  <link rel="stylesheet" th:href="@{~/vendor/fonts/tabler-icons.css }" />
-  <link rel="stylesheet" th:href="@{~/vendor/fonts/flag-icons.css }" />
+  <link rel="stylesheet" th:href="@{~/dist/fonts/fontawesome.css}" />
+  <link rel="stylesheet" th:href="@{~/dist/fonts/tabler-icons.css}" />
+  <link rel="stylesheet" th:href="@{~/dist/fonts/flag-icons.css}" />
 
   <!-- Core CSS -->
-  <link rel="stylesheet" th:href="@{~/vendor/css/rtl/core.css }" />
-  <link rel="stylesheet" th:href="@{~/vendor/css/rtl/theme-default.css }" />
-  <link rel="stylesheet" th:href="@{~/css/demo.css }" />
+  <link rel="stylesheet" th:href="@{~/dist/css/rtl/core.css}" />
+  <link rel="stylesheet" th:href="@{~/dist/css/rtl/theme-default.css}" />
+  <link rel="stylesheet" th:href="@{~/css/demo.css}" />
 
   <!-- Vendors CSS -->
-  <link rel="stylesheet" th:href="@{~/vendor/libs/perfect-scrollbar/perfect-scrollbar.css }" />
-  <link rel="stylesheet" th:href="@{~/vendor/libs/node-waves/node-waves.css }" />
-  <link rel="stylesheet" th:href="@{~/vendor/libs/typeahead-js/typeahead.css }" />
-  <link rel="stylesheet" th:href="@{~/vendor/libs/apex-charts/apex-charts.css }" />
-  <link rel="stylesheet" th:href="@{~/vendor/libs/swiper/swiper.css }" />
-  <link rel="stylesheet" th:href="@{~/vendor/libs/datatables-bs5/datatables.bootstrap5.css }" />
-  <link rel="stylesheet" th:href="@{~/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css }" />
-  <link rel="stylesheet" th:href="@{~/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css }" />
+  <link rel="stylesheet" th:href="@{~/dist/libs/perfect-scrollbar/perfect-scrollbar.css}" />
+  <link rel="stylesheet" th:href="@{~/dist/libs/node-waves/node-waves.css}" />
+  <link rel="stylesheet" th:href="@{~/dist/libs/typeahead-js/typeahead.css}" />
+  <link rel="stylesheet" th:href="@{~/dist/libs/apex-charts/apex-charts.css}" />
+  <link rel="stylesheet" th:href="@{~/dist/libs/swiper/swiper.css}" />
+  <link rel="stylesheet" th:href="@{~/dist/libs/datatables-bs5/datatables.bootstrap5.css}" />
+  <link rel="stylesheet" th:href="@{~/dist/libs/datatables-responsive-bs5/responsive.bootstrap5.css}" />
+  <link rel="stylesheet" th:href="@{~/dist/libs/datatables-checkboxes-jquery/datatables.checkboxes.css}" />
 
   <!-- Page CSS -->
-  <link rel="stylesheet" th:href="@{~/vendor/css/pages/cards-advance.css }" />
+  <link rel="stylesheet" th:href="@{~/dist/css/pages/cards-advance.css}" />
   <!-- Helpers -->
-  <script th:src="@{~/vendor/js/helpers.js }"></script>
+  <script th:src="@{~/dist/js/helpers.js}"></script>
 
   <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
   <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
@@ -91,31 +91,32 @@
 
 <!-- Core JS -->
 <!-- build:js assets/vendor/js/core.js -->
-<script th:src="@{~/vendor/libs/jquery/jquery.js }"></script>
-<script th:src="@{~/vendor/libs/popper/popper.js }"></script>
-<script th:src="@{~/vendor/js/bootstrap.js }"></script>
-<script th:src="@{~/vendor/libs/perfect-scrollbar/perfect-scrollbar.js }"></script>
-<script th:src="@{~/vendor/libs/node-waves/node-waves.js }"></script>
+<script th:src="@{~/dist/libs/jquery/jquery.js}"></script>
+<script th:src="@{~/dist/libs/popper/popper.js}"></script>
+<script th:src="@{~/dist/js/bootstrap.js}"></script>
+<script th:src="@{~/dist/libs/perfect-scrollbar/perfect-scrollbar.js}"></script>
+<script th:src="@{~/dist/libs/node-waves/node-waves.js}"></script>
 
-<script th:src="@{~/vendor/libs/hammer/hammer.js }"></script>
-<script th:src="@{~/vendor/libs/i18n/i18n.js }"></script>
-<script th:src="@{~/vendor/libs/typeahead-js/typeahead.js }"></script>
+<script th:src="@{~/dist/libs/hammer/hammer.js}"></script>
+<script th:src="@{~/dist/libs/i18n/i18n.js}"></script>
+<script th:src="@{~/dist/libs/typeahead-js/typeahead.js}"></script>
 
-<script th:src="@{~/vendor/js/menu.js }"></script>
+<script th:src="@{~/dist/js/menu.js}"></script>
 <!-- endbuild -->
 
 <!-- Vendors JS -->
-<script th:src="@{~/vendor/libs/apex-charts/apexcharts.js }"></script>
-<script th:src="@{~/vendor/libs/swiper/swiper.js }"></script>
-<script th:src="@{~/vendor/libs/datatables-bs5/datatables-bootstrap5.js }"></script>
+<script th:src="@{~/dist/libs/apex-charts/apexcharts.js}"></script>
+<script th:src="@{~/dist/libs/swiper/swiper.js}"></script>
+<script th:src="@{~/dist/libs/datatables-bs5/datatables-bootstrap5.js}"></script>
 
 <!-- Main JS -->
-<script th:src="@{~/js/main.js }"></script>
+<script th:src="@{~/js/main.js}"></script>
 
 <!-- Page JS -->
-<script th:src="@{~/js/dashboards-analytics.js }"></script>
+<script th:src="@{~/js/dashboards-analytics.js}"></script>
 
 <!-- script tambahan -->
-<script layout:fragment="client-script"></script>
+<!--- client script -->
+<th:block layout:fragment="script">
 </body>
 </html>

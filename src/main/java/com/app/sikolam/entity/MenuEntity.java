@@ -42,7 +42,7 @@ public class MenuEntity {
     private Integer position;
 
     @Column(name = "parent_id", insertable = false, updatable = false)
-    private String parentId;
+    private Long parentId;
 
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
