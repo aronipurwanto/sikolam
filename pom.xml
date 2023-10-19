@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.app</groupId>
-    <artifactId>Silam</artifactId>
+    <artifactId>Sikolam</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Silam</name>
     <description>Silam</description>
