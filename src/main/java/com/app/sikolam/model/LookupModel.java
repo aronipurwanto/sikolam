@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class LookupModel {
-    private String id;
+    private Long id;
     private String group;
     private String code;
     private String name;

@@ -1,9 +1,6 @@
 package com.app.sikolam.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,8 +12,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class NilaiEntity {
     @Id
-    @Column(name = "nilai_id", length = 36, unique = true)
-    private String id;
+    @Column(name = "nilai_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "nilai_code", length = 64, unique = true)
     private String code;
@@ -29,4 +27,11 @@ public class NilaiEntity {
 
     @Column(name = "position")
     private Integer positon;
+
+    public NilaiEntity(String code, String name, String category, Integer positon) {
+        this.code = code;
+        this.name = name;
+        this.category = category;
+        this.positon = positon;
+    }
 }
