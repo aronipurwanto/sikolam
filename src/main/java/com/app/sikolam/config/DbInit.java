@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.UUID;
 
 @Slf4j
 @Service
@@ -24,7 +23,15 @@ public class DbInit implements CommandLineRunner {
     private final UserRepo userRepo;
     private final PasswordEncoder encoder;
 
-    private void lookupInit(){
+    @Override
+    public void run(String... args) throws Exception {
+        initLookup();
+        initNilai();
+        initRole();
+        initUser();
+    }
+
+    private void initLookup(){
         if(lookupRepo.findByGroup(CommonConstant.GROUP_NILAI).isEmpty()) {
             lookupRepo.saveAll(
                     Arrays.asList(
@@ -70,7 +77,7 @@ public class DbInit implements CommandLineRunner {
         }
     }
 
-    private void nilaiInit(){
+    private void initNilai(){
         if(nilaiRepo.findByCategory("IBADAH_IMAN").isEmpty()){
             nilaiRepo.saveAll( Arrays.asList(
                     new NilaiEntity( "IMAN_KHAUF","Khauf", "IBADAH_IMAN",1),
@@ -174,12 +181,5 @@ public class DbInit implements CommandLineRunner {
                 log.error("Create super user role failed, Error: {}", e.getMessage());
             }
         }
-    }
-
-
-    @Override
-    public void run(String... args) throws Exception {
-        lookupInit();
-        nilaiInit();
     }
 }

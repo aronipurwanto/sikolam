@@ -17,6 +17,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
+import java.util.concurrent.TimeUnit;
+
 @Configuration
 @RequiredArgsConstructor
 public class SecurityConfig {
@@ -53,7 +55,13 @@ public class SecurityConfig {
                 ).rememberMe((remember) -> remember
                         .rememberMeParameter("remember-me")
                         .key(secretKey)
-                        .tokenValiditySeconds(86400)
+                        .tokenValiditySeconds((int) TimeUnit.DAYS.toSeconds(21))
+                ).logout((logout) ->logout
+                        .logoutRequestMatcher(new AntPathRequestMatcher("/logout","GET"))
+                        .logoutUrl("/logout")
+                        .clearAuthentication(true).invalidateHttpSession(true)
+                        .deleteCookies("JSESSIONID","remember-me")
+                        .logoutSuccessUrl("/login")
                 );
         return http.build();
     }

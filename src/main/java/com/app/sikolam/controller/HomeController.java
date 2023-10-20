@@ -6,10 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/")
 public class HomeController {
-    @GetMapping
-    public ModelAndView index(){
-        return new ModelAndView("pages/home/index.html");
+    @GetMapping("/")
+    public String index(){
+        return "redirect:/home";
+    }
+
+    @GetMapping("/home")
+    public ModelAndView home(){
+        return new ModelAndView("pages/home/index");
     }
 }
